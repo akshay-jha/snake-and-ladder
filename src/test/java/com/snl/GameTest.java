@@ -1,6 +1,10 @@
 package com.snl;
 
+import com.snl.cell.Cell;
+import com.snl.cell.DefaultCell;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -10,7 +14,7 @@ class GameTest {
 
     @Test
     public void playShouldUpdateThePlayerPositionForAGameOf5Rounds() {
-        Board board = new Board(50, 0);
+        Board board = new Board(50, new ArrayList<>());
         Dice dice = mock(Dice.class);
         Game game = new Game(board, dice);
 
