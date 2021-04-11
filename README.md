@@ -7,3 +7,8 @@
  ```shell script
   ./gradlew test
 ```
+
+## To run the program
+```shell script
+ ./gradlew run
+```
