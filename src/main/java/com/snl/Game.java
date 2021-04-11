@@ -1,5 +1,7 @@
 package com.snl;
 
+import com.snl.dice.Dice;
+
 public class Game {
     private final Board board;
     private final Dice dice;

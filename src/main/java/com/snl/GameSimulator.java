@@ -1,6 +1,9 @@
 package com.snl;
 
 import com.snl.cell.SnakeCell;
+import com.snl.dice.CrookedDice;
+import com.snl.dice.Dice;
+import com.snl.dice.NormalDice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +28,23 @@ public class GameSimulator {
             snakeCellList.add(new SnakeCell(start, end));
         }
 
+        System.out.println("Choose the dice you want to play with: Press 1 for normal, Press 2 for crooked");
+        int diceChoice = scanner.nextInt();
+        Dice dice = null;
+        switch (diceChoice) {
+            case 1:
+                dice = new NormalDice();
+                break;
+            case 2:
+                dice = new CrookedDice();
+                break;
+            default:
+                System.out.println("wrong choice of dice, program exiting.....");
+                System.exit(0);
+        }
+
         Board board = new Board(boardSize, snakeCellList);
-        Game game = new Game(board, new Dice());
+        Game game = new Game(board, dice);
         game.play(10);
         System.out.println("The final position of player is: " + board.getPlayerPosition());
     }

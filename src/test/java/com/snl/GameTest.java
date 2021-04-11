@@ -1,7 +1,6 @@
 package com.snl;
 
-import com.snl.cell.Cell;
-import com.snl.cell.DefaultCell;
+import com.snl.dice.NormalDice;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ class GameTest {
     @Test
     public void playShouldUpdateThePlayerPositionForAGameOf5Rounds() {
         Board board = new Board(50, new ArrayList<>());
-        Dice dice = mock(Dice.class);
+        NormalDice dice = mock(NormalDice.class);
         Game game = new Game(board, dice);
 
         when(dice.roll()).thenReturn(1, 1, 1, 1, 1);

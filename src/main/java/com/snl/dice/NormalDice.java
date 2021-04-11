@@ -1,8 +1,8 @@
-package com.snl;
+package com.snl.dice;
 
 import java.util.Random;
 
-public class Dice {
+public class NormalDice implements Dice {
 
     private static final int DICE_MINIMUM_OUTPUT = 1;
     private static final int DICE_MAXIMUM_OUTPUT = 6;

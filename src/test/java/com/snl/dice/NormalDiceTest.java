@@ -1,13 +1,14 @@
-package com.snl;
+package com.snl.dice;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class DiceTest {
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class NormalDiceTest {
 
     @Test
     public void rollShouldReturnANumberBetween1And6() {
-        Dice dice = new Dice();
+        Dice dice = new NormalDice();
 
         int output = dice.roll();
 
