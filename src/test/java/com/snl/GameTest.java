@@ -13,7 +13,7 @@ class GameTest {
 
     @Test
     public void playShouldUpdateThePlayerPositionForAGameOf5Rounds() {
-        Board board = new Board(50, new ArrayList<>());
+        Board board = new Board(50, new ArrayList<>(), new ArrayList<>());
         NormalDice dice = mock(NormalDice.class);
         Game game = new Game(board, dice);
 
